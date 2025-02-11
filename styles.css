@@ -38,12 +38,14 @@ nav ul li a {
 /* Sección principal */
 .hero {
     background: url('https://source.unsplash.com/1600x900/?construction,building') no-repeat center center/cover;
-    color: white; /* Cambia el color del texto a blanco */
+    color: white;
     padding: 100px 20px;
     text-align: center;
     font-size: 1.8em;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
 }
+
 
 
 .hero h2 {
