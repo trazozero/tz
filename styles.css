@@ -10,7 +10,7 @@ body {
 /* Estilos del encabezado */
 header {
     background-color: #222;
-    color: white;
+    color: #f4f4f4;
     padding: 20px 0;
 }
 
@@ -38,7 +38,7 @@ nav ul li a {
 /* Sección principal */
 .hero {
     background: url('https://source.unsplash.com/1600x900/?construction,building') no-repeat center center/cover;
-    color: #f4f4f4;
+    color: white;
     padding: 100px 20px;
 }
 
