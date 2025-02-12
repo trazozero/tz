@@ -36,14 +36,63 @@ nav ul li a {
 }
 
 /* Sección principal */
+/* Sección HERO con imagen y contenido */
 .hero {
-    background: url('https://source.unsplash.com/1600x900/?construction,building') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-    font-size: 1.8em;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.hero-image {
+    flex: 1;
+    background: url('Picsart_25-02-11_18-00-52-008.png') no-repeat center center/cover;
+    height: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 50px;
+    max-width: 600px;
+}
+
+.hero-content h3 {
+    font-size: 1.2em;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
     font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    margin-bottom: 20px;
+}
+
+.bold {
+    color: #d4a017; /* Color dorado */
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Botón de contacto */
+.cta-button {
+    display: inline-block;
+    background-color: #d4a017;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b38b0e;
 }
 
 
