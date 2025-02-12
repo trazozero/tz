@@ -37,24 +37,28 @@ nav ul li a {
 
 /* Sección principal */
 /* Sección HERO con imagen y contenido */
+/* Sección HERO con imagen y contenido */
 .hero {
     display: flex;
-    height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    height: 100vh;
 }
 
+/* Imagen en la mitad izquierda */
 .hero-image {
     flex: 1;
     background: url('Picsart_25-02-11_18-00-52-008.png') no-repeat center center/cover;
     height: 100%;
+    min-height: 500px;
 }
 
+/* Contenido en la mitad derecha */
 .hero-content {
     flex: 1;
     padding: 50px;
     max-width: 600px;
+    text-align: left;
 }
 
 .hero-content h3 {
