@@ -68,7 +68,7 @@ nav ul li a {
 /* Imagen en la mitad izquierda */
 .hero-image {
     flex: 1;
-    background: url('URL_DE_TU_IMAGEN') no-repeat center center/cover;
+    background: url(Picsart_25-02-11_18-00-52-008.png) no-repeat center center/cover;
     height: 100%;
     width: 50%;
     min-height: 500px;
