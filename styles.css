@@ -9,16 +9,19 @@ body {
 
 /* Estilos del encabezado */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #222;
-    color: white;
-    padding: 20px 0;
+    padding: 15px 20px;
+    flex-wrap: wrap;
 }
 
-header h1 {
-    margin: 0;
+.logo {
+    width: 100px;
+    height: auto;
 }
 
-/* Menú de navegación */
 nav ul {
     list-style: none;
     padding: 0;
@@ -35,21 +38,39 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Sección principal */
-/* Sección HERO con imagen y contenido */
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
 /* Sección HERO con imagen y contenido */
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100vh;
+    text-align: left;
 }
 
 /* Imagen en la mitad izquierda */
 .hero-image {
     flex: 1;
-    background: url('Picsart_25-02-11_18-00-52-008.png') no-repeat center center/cover;
+    background: url('URL_DE_TU_IMAGEN') no-repeat center center/cover;
     height: 100%;
+    width: 50%;
     min-height: 500px;
 }
 
@@ -58,7 +79,6 @@ nav ul li a {
     flex: 1;
     padding: 50px;
     max-width: 600px;
-    text-align: left;
 }
 
 .hero-content h3 {
@@ -99,19 +119,28 @@ nav ul li a {
 
 /* Ajustes en móviles */
 @media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        padding: 20px;
+    }
+
     .cta-button {
         width: 80%;
         display: block;
         margin: 15px auto;
         font-size: 1.2em;
     }
-}
-
-
-
-
-.hero h2 {
-    font-size: 2em;
 }
 
 /* Sección sobre nosotros */
@@ -126,114 +155,6 @@ footer {
     color: white;
     padding: 20px;
     margin-top: 20px;
-}
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.logo {
-    width: 120px;
-    height: auto;
-    margin-right: 15px;
-}
-/* Header Responsive */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 80px; /* Reducir el tamaño del logo */
-    height: auto;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-/* Mejorar el menú en pantallas pequeñas */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        width: 60px; /* Ajustar el logo en móviles */
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        padding-top: 5px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-}
-/* Ajuste de la sección hero en móviles */
-.hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    text-align: center;
-}
-
-/* Ajuste de imagen para que se vea bien */
-.hero-image {
-    flex: 1;
-    background: url('URL_DE_TU_IMAGEN') no-repeat center center/cover;
-    height: 400px;
-}
-
-/* Ajuste del contenido */
-.hero-content {
-    flex: 1;
-    padding: 30px;
-    max-width: 500px;
-}
-
-/* Mejoras para móviles */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 250px;
-    }
-
-    .hero-content {
-        max-width: 90%;
-        padding: 10px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8em;
-    }
 }
 
 
