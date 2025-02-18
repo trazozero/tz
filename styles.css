@@ -15,6 +15,7 @@ header {
     background-color: #222;
     padding: 15px 20px;
     flex-wrap: wrap;
+    color: white; /* Cambia el color del texto a blanco */
 }
 
 .logo {
@@ -85,6 +86,14 @@ nav ul li a {
     font-size: 1.2em;
     color: #777;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content h3 img {
+    width: 30px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-left: 10px; /* Espacio entre el texto y el logo */
 }
 
 .hero-content h1 {
