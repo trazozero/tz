@@ -91,7 +91,7 @@ nav ul li a {
 }
 
 .hero-content h3 img {
-    width: 50px; /* Aumenta el tamaño del logo */
+    width: 300px; /* Aumenta el tamaño del logo */
     height: auto;
     margin-left: 15px; /* Espacio entre el texto y el logo */
     vertical-align: middle;
