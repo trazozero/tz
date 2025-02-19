@@ -212,101 +212,33 @@ header {
     color: white;
 }
 
-/* Galería de imágenes */
-.portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px;
-}
-
-.portfolio-item {
-    width: 30%;
-    overflow: hidden;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item img:hover {
-    transform: scale(1.05);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .portfolio-item {
-        width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-item {
-        width: 90%;
-    }
-}
-/* Efecto de zoom al pasar el mouse sobre las imágenes */
-.portafolio-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out; /* Transición suave */
-}
-
-/* Aplica el zoom cuando el usuario pase el mouse */
-.portafolio-item img:hover {
-    transform: scale(1.1); /* Hace que la imagen crezca un 10% */
-}
-
-/* Mejora de la galería */
+/* Estilos para la galería */
 .portafolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas flexibles */
+    gap: 15px; /* Espacio entre imágenes */
     padding: 20px;
+    justify-content: center;
 }
 
-/* Cada proyecto se verá como un bloque */
-.portafolio-item {
-    display: none; /* Oculta todas las imágenes por defecto */
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    text-align: center;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Ajuste del tamaño de las imágenes */
+/* Ajustar tamaño de imágenes */
 .portafolio-item img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    height: auto; /* Mantener la proporción */
     border-radius: 5px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease-in-out;
 }
 
 /* Efecto de zoom al pasar el mouse */
 .portafolio-item img:hover {
     transform: scale(1.05);
+    opacity: 0.9;
 }
 
-/* Responsividad para móviles */
+/* Ajuste de tamaños en pantallas pequeñas */
 @media (max-width: 768px) {
-    .portafolio-item {
-        width: 45%;
+    .portafolio-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
-
-@media (max-width: 480px) {
-    .portafolio-item {
-        width: 90%;
-    }
-}
-
