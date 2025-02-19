@@ -15,7 +15,7 @@ header {
     background-color: #222;
     padding: 15px 20px;
     flex-wrap: wrap;
-    color: white; /* Cambia el color del texto a blanco */
+    color: white;
 }
 
 .logo {
@@ -57,140 +57,6 @@ nav ul li a {
     }
 }
 
-/* Sección HERO con imagen y contenido */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    text-align: left;
-}
-
-/* Imagen en la mitad izquierda */
-.hero-image {
-    flex: 1;
-    background: url(Picsart_25-02-11_18-00-52-008.png) no-repeat center center/cover;
-    height: 100%;
-    width: 50%;
-    min-height: 500px;
-}
-
-/* Contenido en la mitad derecha */
-.hero-content {
-    flex: 1;
-    padding: 50px;
-    max-width: 600px;
-}
-
-.hero-content h3 {
-    font-size: 1.2em;
-    color: #777;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-}
-
-.hero-content h3 img {
-    width: 300px; /* Aumenta el tamaño del logo */
-    height: auto;
-    margin-left: 15px; /* Espacio entre el texto y el logo */
-    vertical-align: middle;
-}
-
-.hero-content h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.bold {
-    color: #d4a017; /* Color dorado */
-}
-
-.hero-content p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Botón de contacto */
-.cta-button {
-    display: inline-block;
-    background-color: #d4a017;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    text-align: center;
-    width: auto;
-}
-
-/* Ajustes en móviles */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 250px;
-    }
-
-    .hero-content {
-        max-width: 90%;
-        padding: 20px;
-    }
-
-    .cta-button {
-        width: 80%;
-        display: block;
-        margin: 15px auto;
-        font-size: 1.2em;
-    }
-}
-
-/* Sección sobre nosotros */
-.about {
-    padding: 40px;
-    background-color: white;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Estilos Generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #222;
-    padding: 15px 20px;
-    flex-wrap: wrap;
-    color: white;
-}
-
-.logo {
-    width: 100px;
-    height: auto;
-}
-
 /* Botones de filtro */
 .portfolio-filters {
     text-align: center;
@@ -215,69 +81,53 @@ header {
 /* Ajuste del contenedor de la galería */
 .portafolio-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ajuste flexible */
-    gap: 25px; /* Espaciado entre imágenes */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajuste más amplio */
+    gap: 20px;
     padding: 20px;
     justify-content: center;
 }
 
 /* Ajuste del tamaño de imágenes dentro de proyectos */
 .portafolio-item img {
-    width: 100%; /* Ocupar todo el espacio del contenedor */
-    height: 280px; /* Ajustar a una altura más visible */
-    max-width: 500px; /* Evitar que sean demasiado grandes en pantallas anchas */
-    object-fit: cover; /* Mantener proporción sin deformarse */
-    border-radius: 10px; /* Bordes redondeados */
+    width: 100%;
+    height: 300px; /* Tamaño más grande */
+    max-width: 600px;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease, opacity 0.3s ease-in-out;
 }
 
-/* Efecto hover para interacción */
 .portafolio-item img:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-/* Ajuste para que en pantallas grandes las imágenes se vean mejor */
+/* Ajuste para pantallas grandes */
 @media (min-width: 1200px) {
     .portafolio-gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila en pantallas grandes */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Ajuste para que en tablets y pantallas medianas se vean mejor */
+/* Ajuste para tablets */
 @media (max-width: 1024px) {
     .portafolio-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en tablets */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Ajuste para que en móviles las imágenes se vean bien */
+/* Ajuste para móviles */
 @media (max-width: 768px) {
     .portafolio-gallery {
-        grid-template-columns: repeat(1, 1fr); /* 1 imagen por fila en móviles */
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .portafolio-item img {
-        height: auto; /* Permitir que la imagen se adapte en móviles */
+        height: auto;
     }
 }
 
-/* Ajuste del popup para móviles */
-@media (max-width: 768px) {
-    .modal img {
-        max-width: 90%; /* Que no ocupe más del 90% de la pantalla */
-        max-height: 80vh; /* No debe sobrepasar la altura visible */
-        object-fit: contain; /* Ajuste para que no se corte la imagen */
-    }
-
-    /* Asegurar que los botones de navegación no se desconfiguren */
-    .nav-btn {
-        font-size: 24px;
-        padding: 8px 15px;
-    }
-}
-
-/* Estilo para el popup */
+/* Estilo para el popup (MODAL) */
 .modal {
     display: none;
     position: fixed;
@@ -286,36 +136,18 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-}
-
-/* Estilo para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
 }
 
 .modal img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 90vw;
+    max-height: 90vh;
     border-radius: 10px;
+    object-fit: contain;
 }
 
 /* Botón de cerrar */
@@ -332,24 +164,37 @@ header {
 .nav-btn {
     position: absolute;
     top: 50%;
-    font-size: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 35px;
+    background-color: rgba(255, 255, 255, 0.6);
     border: none;
     color: black;
-    padding: 10px 20px;
+    padding: 15px 20px;
     cursor: pointer;
     border-radius: 50%;
     transition: background 0.3s;
 }
 
 .nav-btn:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 #prevBtn {
-    left: 10%;
+    left: 5%;
 }
 
 #nextBtn {
-    right: 10%;
+    right: 5%;
+}
+
+/* Ajuste en móviles para el popup */
+@media (max-width: 768px) {
+    .modal img {
+        max-width: 90vw;
+        max-height: 85vh;
+    }
+
+    .nav-btn {
+        font-size: 28px;
+        padding: 10px 15px;
+    }
 }
