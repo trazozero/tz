@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-btn");
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
+    const portfolioItems = document.querySelectorAll(".portafolio-item");
 
     filterButtons.forEach(button => {
         button.addEventListener("click", function () {
@@ -10,12 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
             filterButtons.forEach(btn => btn.classList.remove("active"));
             this.classList.add("active");
 
-            // Filtra los elementos
+            // Mostrar solo las imágenes del filtro seleccionado
             portfolioItems.forEach(item => {
                 if (filter === "all") {
-                    item.style.display = "block";
+                    item.style.display = "flex";  // Muestra todas las imágenes
+                } else if (item.classList.contains(filter)) {
+                    item.style.display = "flex";  // Muestra solo la categoría seleccionada
                 } else {
-                    item.classList.contains(filter) ? item.style.display = "block" : item.style.display = "none";
+                    item.style.display = "none";  // Oculta las demás imágenes
                 }
             });
         });
