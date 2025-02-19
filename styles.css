@@ -263,3 +263,50 @@ header {
     transform: scale(1.1); /* Hace que la imagen crezca un 10% */
 }
 
+/* Mejora de la galería */
+.portafolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cada proyecto se verá como un bloque */
+.portafolio-item {
+    display: none; /* Oculta todas las imágenes por defecto */
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Ajuste del tamaño de las imágenes */
+.portafolio-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de zoom al pasar el mouse */
+.portafolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .portafolio-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portafolio-item {
+        width: 90%;
+    }
+}
+
