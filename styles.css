@@ -215,8 +215,8 @@ header {
 /* Ajuste del contenedor de la galería */
 .portafolio-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 o más columnas en pantallas grandes */
-    gap: 20px; /* Espaciado entre imágenes */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ajuste flexible */
+    gap: 25px; /* Espaciado entre imágenes */
     padding: 20px;
     justify-content: center;
 }
@@ -224,20 +224,21 @@ header {
 /* Ajuste del tamaño de imágenes dentro de proyectos */
 .portafolio-item img {
     width: 100%; /* Ocupar todo el espacio del contenedor */
-    height: 220px; /* Establecer una altura uniforme */
+    height: 280px; /* Ajustar a una altura más visible */
+    max-width: 500px; /* Evitar que sean demasiado grandes en pantallas anchas */
     object-fit: cover; /* Mantener proporción sin deformarse */
-    border-radius: 10px; /* Bordes redondeados para mejor estética */
+    border-radius: 10px; /* Bordes redondeados */
     transition: transform 0.3s ease, opacity 0.3s ease-in-out;
 }
 
-/* Efecto hover para dar sensación de interacción */
+/* Efecto hover para interacción */
 .portafolio-item img:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
 /* Ajuste para que en pantallas grandes las imágenes se vean mejor */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .portafolio-gallery {
         grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila en pantallas grandes */
     }
