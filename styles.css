@@ -262,6 +262,21 @@ header {
     }
 }
 
+/* Ajuste del popup para móviles */
+@media (max-width: 768px) {
+    .modal img {
+        max-width: 90%; /* Que no ocupe más del 90% de la pantalla */
+        max-height: 80vh; /* No debe sobrepasar la altura visible */
+        object-fit: contain; /* Ajuste para que no se corte la imagen */
+    }
+
+    /* Asegurar que los botones de navegación no se desconfiguren */
+    .nav-btn {
+        font-size: 24px;
+        padding: 8px 15px;
+    }
+}
+
 /* Estilo para el popup */
 .modal {
     display: none;
