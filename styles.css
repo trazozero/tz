@@ -212,34 +212,52 @@ header {
     color: white;
 }
 
-/* Estilos para la galería */
+/* Ajuste del contenedor de la galería */
 .portafolio-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas flexibles */
-    gap: 15px; /* Espacio entre imágenes */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 o más columnas en pantallas grandes */
+    gap: 20px; /* Espaciado entre imágenes */
     padding: 20px;
     justify-content: center;
 }
 
-/* Ajustar tamaño de imágenes */
+/* Ajuste del tamaño de imágenes dentro de proyectos */
 .portafolio-item img {
-    width: 100%; /* Ocupar todo el ancho disponible */
-    height: auto; /* Mantener la proporción */
-    border-radius: 5px;
-    object-fit: cover;
+    width: 100%; /* Ocupar todo el espacio del contenedor */
+    height: 220px; /* Establecer una altura uniforme */
+    object-fit: cover; /* Mantener proporción sin deformarse */
+    border-radius: 10px; /* Bordes redondeados para mejor estética */
     transition: transform 0.3s ease, opacity 0.3s ease-in-out;
 }
 
-/* Efecto de zoom al pasar el mouse */
+/* Efecto hover para dar sensación de interacción */
 .portafolio-item img:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-/* Ajuste de tamaños en pantallas pequeñas */
+/* Ajuste para que en pantallas grandes las imágenes se vean mejor */
+@media (min-width: 1024px) {
+    .portafolio-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila en pantallas grandes */
+    }
+}
+
+/* Ajuste para que en tablets y pantallas medianas se vean mejor */
+@media (max-width: 1024px) {
+    .portafolio-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en tablets */
+    }
+}
+
+/* Ajuste para que en móviles las imágenes se vean bien */
 @media (max-width: 768px) {
     .portafolio-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(1, 1fr); /* 1 imagen por fila en móviles */
+    }
+
+    .portafolio-item img {
+        height: auto; /* Permitir que la imagen se adapte en móviles */
     }
 }
 
