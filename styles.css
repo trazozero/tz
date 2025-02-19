@@ -167,4 +167,86 @@ footer {
     margin-top: 20px;
 }
 
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Botones de filtro */
+.portfolio-filters {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.filter-btn.active {
+    background-color: #d4a017;
+    color: white;
+}
+
+/* Galería de imágenes */
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+}
+
+.portfolio-item {
+    width: 30%;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        width: 90%;
+    }
+}
 
