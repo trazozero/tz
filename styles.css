@@ -249,4 +249,17 @@ header {
         width: 90%;
     }
 }
+/* Efecto de zoom al pasar el mouse sobre las imágenes */
+.portafolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Aplica el zoom cuando el usuario pase el mouse */
+.portafolio-item img:hover {
+    transform: scale(1.1); /* Hace que la imagen crezca un 10% */
+}
 
