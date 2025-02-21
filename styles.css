@@ -15,7 +15,7 @@ header {
     background-color: #222;
     padding: 15px 20px;
     flex-wrap: wrap;
-    color: white;
+    color: white; /* Cambia el color del texto a blanco */
 }
 
 .logo {
@@ -39,15 +39,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Pie de página (Footer) */
-footer {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-
 /* Responsivo para móviles */
 @media (max-width: 768px) {
     header {
@@ -64,6 +55,140 @@ footer {
         display: block;
         margin: 5px 0;
     }
+}
+
+/* Sección HERO con imagen y contenido */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    text-align: left;
+}
+
+/* Imagen en la mitad izquierda */
+.hero-image {
+    flex: 1;
+    background: url(Picsart_25-02-11_18-00-52-008.png) no-repeat center center/cover;
+    height: 100%;
+    width: 50%;
+    min-height: 500px;
+}
+
+/* Contenido en la mitad derecha */
+.hero-content {
+    flex: 1;
+    padding: 50px;
+    max-width: 600px;
+}
+
+.hero-content h3 {
+    font-size: 1.2em;
+    color: #777;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content h3 img {
+    width: 300px; /* Aumenta el tamaño del logo */
+    height: auto;
+    margin-left: 15px; /* Espacio entre el texto y el logo */
+    vertical-align: middle;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bold {
+    color: #d4a017; /* Color dorado */
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Botón de contacto */
+.cta-button {
+    display: inline-block;
+    background-color: #d4a017;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-align: center;
+    width: auto;
+}
+
+/* Ajustes en móviles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .cta-button {
+        width: 80%;
+        display: block;
+        margin: 15px auto;
+        font-size: 1.2em;
+    }
+}
+
+/* Sección sobre nosotros */
+.about {
+    padding: 40px;
+    background-color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
 }
 
 /* Botones de filtro */
@@ -85,125 +210,4 @@ footer {
 .filter-btn.active {
     background-color: #d4a017;
     color: white;
-}
-
-/* Ajuste del contenedor de la galería */
-.portafolio-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Ajuste más amplio */
-    gap: 25px;
-    padding: 20px;
-    justify-content: center;
-}
-
-/* Ajuste del tamaño de imágenes dentro de proyectos */
-.portafolio-item img {
-    width: 100%;
-    height: 350px; /* Aumento del tamaño */
-    max-width: 650px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease-in-out;
-}
-
-.portafolio-item img:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-/* Ajuste para pantallas grandes */
-@media (min-width: 1200px) {
-    .portafolio-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Ajuste para tablets */
-@media (max-width: 1024px) {
-    .portafolio-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Ajuste para móviles */
-@media (max-width: 768px) {
-    .portafolio-gallery {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .portafolio-item img {
-        height: auto;
-    }
-}
-
-/* Estilo para el popup (MODAL) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.modal img {
-    max-width: 95vw;
-    max-height: 90vh;
-    border-radius: 10px;
-    object-fit: contain;
-}
-
-/* Botón de cerrar */
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Botones de navegación */
-.nav-btn {
-    position: absolute;
-    top: 50%;
-    font-size: 35px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: none;
-    color: black;
-    padding: 15px 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s;
-}
-
-.nav-btn:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-#prevBtn {
-    left: 5%;
-}
-
-#nextBtn {
-    right: 5%;
-}
-
-/* Ajuste en móviles para el popup */
-@media (max-width: 768px) {
-    .modal img {
-        max-width: 90vw;
-        max-height: 85vh;
-    }
-
-    .nav-btn {
-        font-size: 28px;
-        padding: 10px 15px;
-    }
 }
