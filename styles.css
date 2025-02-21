@@ -350,3 +350,10 @@ header {
         padding: 10px 15px;
     }
 }
+.whatsapp-button img {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Evita que tenga margen extra */
+    margin: 10px auto; /* Centra la imagen */
+}
+
