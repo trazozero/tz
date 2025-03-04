@@ -6,94 +6,99 @@
     <title>Contacto - Trazo Zero Construcciones</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
+        .contacto-container {
             display: flex;
-            height: 100vh;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
         }
-        .formulario {
-            width: 40%;
-            padding: 40px;
-            background: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+
+        .contacto-form {
+            flex: 1;
+            max-width: 40%;
         }
-        .formulario h2 {
-            text-align: center;
+
+        .contacto-imagen {
+            flex: 1;
+            max-width: 60%;
         }
-        .formulario form {
-            display: flex;
-            flex-direction: column;
-        }
-        .formulario label, 
-        .formulario select, 
-        .formulario input, 
-        .formulario button {
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        .formulario button {
-            background: #d4a017;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .imagen {
-            width: 60%;
-            background: url('imagen-contacto.jpg') no-repeat center center/cover;
+
+        .contacto-imagen img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="formulario">
-            <h2>Formulario de contacto</h2>
-            <form action="https://formsubmit.co/t.zero.construcciones@gmail.com" method="POST">
-                <label for="nombre">Nombre completo *</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre y apellido" required>
 
-                <label for="telefono">Teléfono *</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número (WhatsApp o celular)" required>
+<header>
+    <img src="Trazo zero logo.png" alt="Logo de Trazo Zero" class="logo">
+    <h1>Contacto</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
-                <label for="email">Correo electrónico *</label>
-                <input type="email" id="email" name="email" placeholder="Tu dirección de correo electrónico" required>
+<section class="contacto-container">
+    <div class="contacto-form">
+        <h2>Formulario de contacto</h2>
+        <form action="https://formsubmit.co/t.zero.construcciones@gmail.com" method="POST">
+            
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre y apellido" required>
 
-                <label for="servicio">¿Qué servicio necesitas? *</label>
-                <select id="servicio" name="servicio" required>
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="remodelacion">Remodelación</option>
-                    <option value="construccion">Construcción</option>
-                    <option value="mobiliario">Mobiliario</option>
-                    <option value="otro">Otro</option>
-                </select>
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número (WhatsApp o celular)" required>
 
-                <label for="tiempo">¿Cuándo planeas desarrollar tu proyecto? *</label>
-                <select id="tiempo" name="tiempo" required>
-                    <option value="" disabled selected>Selecciona un plazo</option>
-                    <option value="inmediato">Inmediatamente</option>
-                    <option value="1-3-meses">De 1 a 3 meses</option>
-                    <option value="3-6-meses">De 3 a 6 meses</option>
-                    <option value="mas-6-meses">En más de 6 meses</option>
-                </select>
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="Tu dirección de correo electrónico" required>
 
-                <label for="presupuesto">¿Cuál es tu presupuesto aproximado? *</label>
-                <select id="presupuesto" name="presupuesto" required>
-                    <option value="" disabled selected>Selecciona un rango</option>
-                    <option value="menos-5000">Menos de $5,000</option>
-                    <option value="5000-10000">Entre $5,000 y $10,000</option>
-                    <option value="10000-20000">Entre $10,000 y $20,000</option>
-                    <option value="mas-20000">Más de $20,000</option>
-                </select>
+            <label for="servicio">¿Qué servicio necesitas? *</label>
+            <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="remodelacion">Remodelación</option>
+                <option value="construccion">Construcción</option>
+                <option value="mobiliario">Mobiliario</option>
+                <option value="otro">Otro</option>
+            </select>
 
-                <button type="submit">Solicitar asesoría</button>
-            </form>
-        </div>
-        <div class="imagen"></div>
+            <label for="tiempo">¿Cuándo planeas desarrollar tu proyecto? *</label>
+            <select id="tiempo" name="tiempo" required>
+                <option value="" disabled selected>Selecciona un plazo</option>
+                <option value="inmediato">Inmediatamente</option>
+                <option value="1-3-meses">De 1 a 3 meses</option>
+                <option value="3-6-meses">De 3 a 6 meses</option>
+                <option value="mas-6-meses">En más de 6 meses</option>
+            </select>
+
+            <label for="presupuesto">¿Cuál es tu presupuesto aproximado? *</label>
+            <select id="presupuesto" name="presupuesto" required>
+                <option value="" disabled selected>Selecciona un rango</option>
+                <option value="menos-5000">Menos de $5,000</option>
+                <option value="5000-10000">Entre $5,000 y $10,000</option>
+                <option value="10000-20000">Entre $10,000 y $20,000</option>
+                <option value="mas-20000">Más de $20,000</option>
+            </select>
+
+            <button type="submit" class="cta-button">Solicitar asesoría</button>
+        </form>
+        
+        <h3>O contáctanos directamente por WhatsApp</h3>
+        <a href="https://wa.me/5217727363384" target="_blank" class="whatsapp-button">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Enviar mensaje
+        </a>
     </div>
+
+    <div class="contacto-imagen">
+        <img src="tu-imagen.jpg" alt="Imagen de construcción">
+    </div>
+</section>
+
 </body>
 </html>
