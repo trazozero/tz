@@ -242,7 +242,7 @@ header {
 /* Ajuste del tamaño de imágenes dentro de proyectos */
 .portafolio-item img {
     width: 100%;
-    height: 350px; /* Aumento del tamaño */
+    height: auto;
     max-width: 650px;
     object-fit: cover;
     border-radius: 10px;
