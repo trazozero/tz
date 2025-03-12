@@ -556,4 +556,67 @@ nav ul li a.active {
     }
 }
 
+/* Asegurar que el header usa flexbox */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea elementos en los extremos */
+    background-color: #222;
+    padding: 15px 20px;
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan en móvil */
+}
+
+/* Ajustar el logo */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Ajustar la navegación */
+nav {
+    display: flex;
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+/* Estilos de los botones */
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #d4a017;
+    border-radius: 5px;
+}
+
+/* 📱 Ajuste para pantallas móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Mantiene el header en una sola línea */
+    }
+
+    .logo {
+        width: 80px; /* Ajuste de tamaño para móvil */
+    }
+
+    nav ul {
+        flex-direction: row; /* Mantiene los botones en fila */
+    }
+
+    nav ul li a {
+        padding: 8px 10px; /* Ajustar padding en móviles */
+        font-size: 14px; /* Reducir tamaño en móvil */
+    }
+}
 
